@@ -8,8 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-export EMAIL_USER="kemimafe11@gmail.com"
-export EMAIL_PASS="koxg jplw uwrb fdyb"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
