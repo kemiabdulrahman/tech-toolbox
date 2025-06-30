@@ -1,6 +1,5 @@
 # Create a new directory and navigate to it
 alias mkcd='mkdir "$1" && cd "$1"'
-alias go='cd /mnt/c/Users/AbdulRahman/Documents/cs50'
 alias hc='history -c && history -w'
 
 # Shortcut for commonly used Git commands
@@ -72,38 +71,6 @@ alias gp='git push'
 alias gpu='git push -u origin'
 alias gpf='git push --force'
 alias gpt='git push --tags'
-
-
-
-
-# Vue Commands
- alias nrs='npm run serve'
- alias vc='vue create'
- alias vav='vue add vuetify'
-
-# Django commands
-
-alias djapp='django-admin startapp'
-alias djpro='django-admin startproject'
-
-alias djmm='python3 manage.py makemigrations'
-alias djm='python3 manage.py migrate'
-alias djrun='python3 manage.py runserver'
-alias djcr='python3 manage.py createsuperuser'
-
-alias djsh='python3 manage.py shell'
-alias djt='python3 manage.py test'
-alias djdb='python3 manage.py dbshell'
-alias djc='python3 manage.py collectstatic'
-
-alias djrs='python3 manage.py runscript'
-alias djlr='python3 manage.py livereload'
-
-# django file setup
-# files related 
-alias make='mkdir static templates'
-# getbs5 
-alias getbs5='cp ~/bash-config-files/bootstrap*' 
 
 
 
@@ -183,34 +150,3 @@ alias view='less'
 
 # Run a Python script with the virtual environment activated
 alias pyvenv='source venv/bin/activate && python'
-
-# Compile and run a C program
-alias cprun='gcc "$1" -o "$1".out && ./"$1".out'
-
-# Compile and run a Java program
-alias javarun='javac "$1" && java "${1%.*}"'
-
-# List all available Docker containers
-alias dockps='docker ps -a'
-
-# Display the Docker container logs
-alias docklogs='docker logs'
-
-# Start a Docker container
-alias dockstart='docker start'
-
-# Stop a Docker container
-alias dockstop='docker stop'
-
-# Remove a Docker container
-alias dockrm='docker rm'
-
-# Pull the latest updates for Docker images
-alias dockpull='docker pull'
-
-# Show disk usage statistics for Docker volumes
-alias dockdu='docker system df -v'
-
-# Clear the Docker cache and reclaim disk space
-alias dockclean='docker system prune -af'
-
