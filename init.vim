@@ -67,7 +67,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 colorscheme gruvbox
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 smartindent
-autocmd FileType vue setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 smartindent
+
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 smartindent
 
 xmap <silent> <F4>  <Plug>(coc-convert-snippet)
