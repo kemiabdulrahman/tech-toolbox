@@ -2,6 +2,12 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -14,10 +20,8 @@ HISTCONTROL=ignoreboth
 
 
 
-
-
-
-
+export PATH="$HOME/flutter/bin:$PATH"
+export PATH="$PATH:/home/abdulrahman/.local/bin"
 
 
 # append to the history file, don't overwrite it
@@ -45,29 +49,21 @@ yellow=$(tput setaf 228);
 green=$(tput setaf 71);
 white=$(tput setaf 15);
 bold=$(tput bold);
-reset=$(tput setaf sgr0);
-
-
-PS1="\[${bold}\]\n";   
-PS1+="\[${orange}\]\u";  # username
-PS1+="\[${white}\] at ";
-PS1+="\[${yellow}\]\h";  # host
-PS1+="\[${white}\] in ";
-PS1+="\[${green}\]\W";	# working directory
-PS1+="\n";
-PS1+="\[${white}\]\$ \[${reset}\]";
-
-export PS1;
+reset=$(tput sgr0);
 
 
 
+PS1="\[${bold}\]\n"
+PS1+="\[${orange}\]\u"           # username
+PS1+="\[${white}\] at "
+PS1+="\[${yellow}\]\h"           # host
+PS1+="\[${white}\] in "
+PS1+="\[${green}\]\W"            # working directory
 
 
-
-
-
-
-
+PS1+="\n"
+PS1+="\[${white}\]\$ \[${reset}\]"
+export PS1
 
 
 
@@ -146,3 +142,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+source /opt/openfoam11/etc/bashrc
